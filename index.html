@@ -3,13 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trade With Mohit Agarwal</title>
+<title>TRADE WITH MOHIT</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 *{
@@ -21,168 +17,152 @@
 
 body{
     min-height:100vh;
-    background:radial-gradient(circle at top,#020617,#000);
+    background:linear-gradient(180deg,#eef2ff,#f8f9ff);
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#fff;
 }
 
-/* CARD */
 .card{
     width:92%;
-    max-width:440px;
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(22px);
-    border-radius:32px;
-    padding:40px 26px;
+    max-width:420px;
+    background:#fff;
+    border-radius:28px;
+    padding:35px 25px 30px;
     text-align:center;
-    box-shadow:
-      0 40px 120px rgba(99,102,241,0.35),
-      inset 0 0 0 1px rgba(255,255,255,0.1);
+    box-shadow:0 20px 50px rgba(0,0,0,0.12);
 }
 
-/* LOGO */
-.logo{
-    width:130px;
-    height:130px;
-    margin:0 auto 20px;
+/* ================= LOGO GLOW ================= */
+.logo-wrap{
+    width:120px;
+    height:120px;
+    margin:0 auto 18px;
     border-radius:50%;
-    background:#000;
+    background:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
-    box-shadow:
-      0 0 30px rgba(59,130,246,0.9),
-      0 0 70px rgba(239,68,68,0.7);
-    animation:pulse 2.5s infinite;
+    animation:logoGlow 3s infinite alternate;
 }
 
-@keyframes pulse{
-    0%{transform:scale(1)}
-    50%{transform:scale(1.06)}
-    100%{transform:scale(1)}
+@keyframes logoGlow{
+    0%{ box-shadow:0 0 12px rgba(79,70,229,0.4); }
+    100%{ box-shadow:0 0 40px rgba(79,70,229,0.95); }
 }
 
-.logo img{
-    width:82%;
-    height:82%;
-    border-radius:50%;
-    object-fit:cover;
+.logo-wrap img{
+    width:85%;
 }
 
-/* TITLE */
+/* ================= TITLE ================= */
 h1{
-    font-size:24px;
+    font-size:26px;
     font-weight:700;
+    letter-spacing:1px;
     margin-bottom:8px;
-    background:linear-gradient(90deg,#3b82f6,#ef4444,#3b82f6);
-    background-size:200%;
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    animation:gradientMove 3s linear infinite;
-}
-
-@keyframes gradientMove{
-    to{background-position:200%}
 }
 
 .sub{
     font-size:14px;
-    color:#c7d2fe;
-    margin-bottom:28px;
+    color:#777;
+    margin-bottom:22px;
 }
 
-/* FEATURES */
+/* ================= FEATURES ================= */
 .features{
     text-align:left;
-    margin-bottom:32px;
+    margin-bottom:30px;
 }
 
 .feature{
     display:flex;
     align-items:center;
-    gap:14px;
+    gap:12px;
     font-size:15px;
-    margin-bottom:16px;
-    animation:fadeUp .8s ease both;
+    margin-bottom:14px;
+    color:#333;
 }
 
-.feature:nth-child(2){animation-delay:.1s}
-.feature:nth-child(3){animation-delay:.2s}
-.feature:nth-child(4){animation-delay:.3s}
-
-@keyframes fadeUp{
-    from{opacity:0;transform:translateY(15px)}
-    to{opacity:1;transform:translateY(0)}
-}
-
-.feature i{
-    width:38px;
-    height:38px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:linear-gradient(135deg,#2563eb,#ef4444);
-    box-shadow:0 0 20px rgba(99,102,241,0.9);
-    animation:iconGlow 1.6s infinite alternate;
-}
-
-@keyframes iconGlow{
-    from{box-shadow:0 0 10px rgba(59,130,246,0.6)}
-    to{box-shadow:0 0 25px rgba(239,68,68,1)}
-}
-
-/* TELEGRAM BUTTON – RED + BLUE MIX */
+/* ================= TELEGRAM BUTTON ================= */
 .telegram-btn{
     width:100%;
-    padding:18px;
+    padding:16px;
     font-size:16px;
     font-weight:600;
     color:#fff;
     border:none;
-    border-radius:18px;
-    background:linear-gradient(135deg,#2563eb,#ef4444,#2563eb);
+    border-radius:14px;
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
     cursor:pointer;
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:12px;
-    box-shadow:0 0 40px rgba(239,68,68,.9);
-    animation:zoomPulse 1.4s infinite;
+    gap:10px;
+
+    animation:heartbeat 1.5s infinite,
+              btnGlow 2.5s infinite alternate;
 }
 
-@keyframes zoomPulse{
-    0%{transform:scale(1)}
-    50%{transform:scale(1.06)}
-    100%{transform:scale(1)}
+/* HEART BEAT */
+@keyframes heartbeat{
+    0%{transform:scale(1);}
+    25%{transform:scale(1.05);}
+    50%{transform:scale(1);}
+    75%{transform:scale(1.08);}
+    100%{transform:scale(1);}
 }
 
-.telegram-btn i{
+/* BUTTON GLOW */
+@keyframes btnGlow{
+    0%{
+        box-shadow:0 0 10px rgba(79,70,229,0.5);
+    }
+    100%{
+        box-shadow:0 0 35px rgba(79,70,229,1);
+    }
+}
+
+/* ================= TELEGRAM ICON ================= */
+.telegram-icon{
     font-size:22px;
+    animation:bounce 1.2s infinite,
+              iconGlow 2s infinite alternate;
 }
 
-/* FOOTER */
+/* ICON BOUNCE */
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+}
+
+/* ICON GLOW */
+@keyframes iconGlow{
+    0%{text-shadow:0 0 6px rgba(255,255,255,0.6);}
+    100%{text-shadow:0 0 16px rgba(255,255,255,1);}
+}
+
+/* ================= STARS ================= */
 .stars{
-    margin:26px 0 6px;
+    margin:22px 0 10px;
+    font-size:22px;
     color:#facc15;
 }
 
 .rating{
     font-size:13px;
-    color:#c7d2fe;
+    color:#666;
     margin-bottom:18px;
 }
 
+/* ================= DISCLAIMER ================= */
 .disclaimer{
     font-size:11.5px;
-    color:#9ca3af;
+    color:#9a9a9a;
     line-height:1.6;
 }
 </style>
-
-<!-- META PIXEL -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -190,75 +170,51 @@ n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
+s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init','2086155282203727');
-
-/* PAGEVIEW – ONLY ONCE */
-if(!localStorage.getItem('pageview_fired')){
-    fbq('track','PageView');
-    localStorage.setItem('pageview_fired','yes');
-}
+fbq('init', '2086155282203727');
+fbq('track', 'PageView');
 </script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2086155282203727&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 
 <body>
 
 <div class="card">
 
-    <div class="logo">
-        <img src="https://uploads.onecompiler.io/446vwj75z/448qqnmcq/WhatsApp%20Image%202025-12-26%20at%2018.36.44.jpeg">
+    <!-- LOGO -->
+    <div class="logo-wrap">
+        <img src="logo.png" alt="TRADE WITH MOHIT">
     </div>
 
     <h1>TRADE WITH MOHIT AGARWAL</h1>
-    <div class="sub">Elite Trading Education • Premium Community</div>
+    <div class="sub">20,000+ learners • Trusted community</div>
 
     <div class="features">
-        <div class="feature"><i class="fa-solid fa-chart-line"></i> Market Education & Chart Reading</div>
-        <div class="feature"><i class="fa-solid fa-chart-pie"></i> Nifty • BankNifty • Stocks</div>
-        <div class="feature"><i class="fa-solid fa-shield-halved"></i> Risk Management Strategy</div>
-        <div class="feature"><i class="fa-solid fa-gem"></i> No Fake Tips • Only Knowledge</div>
+        <div class="feature">📊 Market Education & Chart Reading</div>
+        <div class="feature">📈 Nifty • BankNifty • Stock Analysis</div>
+        <div class="feature">🛡️ Risk Management & Discipline</div>
+        <div class="feature">🎯 Learn with clarity, not false promises</div>
     </div>
 
     <!-- TELEGRAM BUTTON -->
-    <button class="telegram-btn" onclick="joinTelegram()">
-        <i class="fa-brands fa-telegram"></i>
+    <button class="telegram-btn" onclick="window.location.href=''https://t.me/+zrnr97SHlsAyYjZl">
+        <span class="telegram-icon">✈️</span>
         JOIN TELEGRAM CHANNEL
     </button>
 
-    <div class="stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-    </div>
-
-    <div class="rating">Trusted by serious learners</div>
+    <div class="stars">★★★★★</div>
+    <div class="rating">Rated highly by community learners</div>
 
     <div class="disclaimer">
-        Educational purpose only.<br>
+        Educational purpose only. No tips, no guarantees.<br>
         Market participation involves risk.
     </div>
 
 </div>
-
-<script>
-let telegramClicked = false;
-
-function joinTelegram(){
-    if(telegramClicked) return;
-    telegramClicked = true;
-
-    if(!localStorage.getItem('telegram_subscribed')){
-        fbq('track','Subscribe');
-        localStorage.setItem('telegram_subscribed','yes');
-    }
-
-    window.location.href = "https://t.me/+zrnr97SHlsAyYjZl";
-}
-</script>
 
 </body>
 </html>
